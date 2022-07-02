@@ -54,27 +54,53 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xfff5f5f5),  //Mudar a cor do Aplicativo
       appBar: AppBar(
         elevation: 0,
-        leading: Icon(Icons.menu,color: Colors.black),
+        leading: Icon(Icons.menu,color: Colors.black),  //Icone que vem antes do texto na AppBar
 
-        backgroundColor: Color(0xfff5d415),
+        backgroundColor: Color(0xfff5d415),  //cor da AppBar
+
         title: Text(widget.title,style: TextStyle(color: Colors.black),),
        
+       
  actions:[
-   Icon(Icons.shopping_cart,color: Colors.black),
-
+   
+   Padding(padding: EdgeInsets.fromLTRB(0, 0, 12, 0),
+   child: Icon(Icons.shopping_cart_outlined,color: Colors.black),  //icone que vem depois do texto na AppBar
+   ),
  ],
+
+
+     bottom: PreferredSize(
+     preferredSize: Size.fromHeight(50),
+     child: Row(
+       children: [
+         Padding(padding: EdgeInsets.fromLTRB(20, 10, 40, 5),
+         child: Icon(Icons.pin_drop, size: 30),   //Icone antes do sub-texto da AppBar
+         ),
+         Text("Enviar para Mercado Aberto",style: TextStyle(fontSize: 20),),  //sub-texto da AppBar
+       ],
+     ),
+
+     ),
+
+
       ),
-      body: Column(
-        children: [
-          Container(
-            child: Text("Enviar para Mercado Aberto"),
-            width: 400,
-            height: 20,
-            color: Color(0xfff5d415),
-          )
-        ],
+      body: Container(  // criar um container
+
+        height: 180,  // definir o tamanho do container
+
+        decoration: BoxDecoration(  //decoração da box(container)
+          gradient: LinearGradient(  //cor gradiante
+            begin: Alignment.topCenter,  //definir o inicio da gradiante
+            end: Alignment.bottomCenter,  //definir o final da gradiante
+        colors:[  //cores da gradiante
+           Color(0xfff5d415),
+           Color(0xfff5f5f5),
+        ]
+        ),
+        ),
       ),
     );
   }

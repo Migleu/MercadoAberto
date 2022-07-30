@@ -3,6 +3,7 @@ import 'package:flutter_application_1/componentes/botao_categorias.dart';
 import 'package:flutter_application_1/componentes/campo_pesquisa.dart';
 import 'package:flutter_application_1/componentes/card_frete_gratis.dart';
 import 'package:flutter_application_1/componentes/card_assinatura.dart';
+import 'package:flutter_application_1/componentes/enviar_para.dart';
 
 void main() {
   runApp(const MyApp());
@@ -70,21 +71,9 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(4.0),
-          child: Container(
-            color:const Color (0xffffdb15),
-            height: 40.0,
-            child: Row(
-              children: const [
-                Padding(padding: EdgeInsets.all(5)),
-                Icon(
-                  Icons.pin_drop_outlined,
-                  size: 22,
-                ),
-                Padding(padding: EdgeInsets.all(5)),
-                Text("Enviar para"),
-              ],
-            ),
-          ),
+          child: 
+
+         EnviarPara(),
         ),
       ),
       body: Container(

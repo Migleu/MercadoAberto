@@ -29,6 +29,20 @@ class _BotaoCategoriaState extends State<BotaoCategoria> {
         })
       },
 
+ child: MouseRegion(  // Define uma acao para todos dentro dele (filhos)
+
+      // OnTap e a interaçao do usuario com o componente 
+      onEnter: (PointerEvent details) => { 
+        setState(() => {
+             selecionado = !selecionado
+        })
+      },
+
+       onExit: (PointerEvent details) => { 
+        setState(() => {
+             selecionado = !selecionado
+        })
+      },
       
       child: 
       Padding(padding: EdgeInsets.all(10),
@@ -62,6 +76,7 @@ Container(
         ],
        ),
       ),
+ ),
     );
   }
 }

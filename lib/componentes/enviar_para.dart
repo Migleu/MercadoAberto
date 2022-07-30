@@ -22,24 +22,23 @@ String texto = "Casa";
         }),
       },
 
-    child: Container(
+      child: Container(
 
-            color:const Color (0xffffdb15),
-            height: 40.0,
-            child: Row(
-              children:  [
-                Padding(padding: EdgeInsets.all(5)),
-                Icon(
-                  Icons.pin_drop_outlined,
-                  size: 22,
-                ),
-                Padding(padding: EdgeInsets.all(5)),
-                Text("Enviar para: "),
-                Visibility(child: Text(texto), visible: selecionado,) 
-              ],
+        color:const Color (0xffffdb15),
+        height: 40.0,
+        child: Row(
+          children:  [
+            Padding(padding: EdgeInsets.all(5)),
+            Icon(
+              Icons.pin_drop_outlined,
+              size: 22,
             ),
-          
-    ),
+            Padding(padding: EdgeInsets.all(5)),
+            Text("Enviar para: "),
+            Visibility(child: Text(texto), visible: selecionado,) 
+          ],
+        ),
+      ),
     );
   }
 }

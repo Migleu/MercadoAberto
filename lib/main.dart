@@ -111,7 +111,10 @@ class _MyHomePageState extends State<MyHomePage> {
               const CardFreteGratis(),
               const Padding(padding: EdgeInsets.all(10)),
 
-              Row(children: [
+
+              Row(
+               mainAxisAlignment: MainAxisAlignment.spaceAround,
+               children: [
 
                 BotaoCategoria(
                   icone: Icons.smartphone,
@@ -137,8 +140,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   icone: Icons.add,
                   sub: "Ver mais"
                 ),
-              ],)
-            
+              ],
+              ),
             
           ],
         ),

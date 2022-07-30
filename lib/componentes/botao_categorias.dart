@@ -1,4 +1,3 @@
-
 //  Atalho: stf
 
 import 'package:flutter/material.dart';
@@ -29,54 +28,50 @@ class _BotaoCategoriaState extends State<BotaoCategoria> {
         })
       },
 
- child: MouseRegion(  // Define uma acao para todos dentro dele (filhos)
+      child: MouseRegion(  // Define uma acao para todos dentro dele (filhos)
 
-      // OnTap e a interaçao do usuario com o componente 
-      onEnter: (PointerEvent details) => { 
-        setState(() => {
-             selecionado = !selecionado
-        })
-      },
+        // OnTap e a interaçao do usuario com o componente 
+        onEnter: (PointerEvent details) => { 
+          setState(() => {
+              selecionado = !selecionado
+          })
+        },
 
-       onExit: (PointerEvent details) => { 
-        setState(() => {
-             selecionado = !selecionado
-        })
-      },
+        onExit: (PointerEvent details) => { 
+          setState(() => {
+              selecionado = !selecionado
+          })
+        },
       
-      child: 
-      Padding(padding: EdgeInsets.all(10),
-      
-      child: Column(
-        children: [
-Container(
-      padding: EdgeInsets.all(18),
-      decoration: BoxDecoration(
+        child: Column(
+          children: [
+            Container(
+              padding: EdgeInsets.all(18),
+              decoration: BoxDecoration(
 
-        color: Colors.white, // Mudar a cor do botao ao ser clicado
+                color: Colors.white, // Mudar a cor do botao ao ser clicado
 
-        borderRadius: BorderRadius.circular(100)
-      ),
-      child: Icon(
+                borderRadius: BorderRadius.circular(100)
+              ),
+              child: Icon(
 
-        // widget serve para chamar a variavel
-        widget.icone,  // Variavel que muda o icone do botao
+                // widget serve para chamar a variavel
+                widget.icone,  // Variavel que muda o icone do botao
 
-        size: 30,
-        color: selecionado ? Colors.blue : Colors.grey,
-      ),
-      ),
-      Padding(padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
-      child: Text("${widget.sub}", style: TextStyle(color: selecionado ? Colors.blue : Colors.black),
- 
+                size: 30,
+                color: selecionado ? Colors.blue : Colors.grey,
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
+              child: Text("${widget.sub}", style: TextStyle(color: selecionado ? Colors.blue : Colors.black),),
+            ),
+
+
+          ],
         ),
       ),
-
-
-        ],
-       ),
-      ),
- ),
-    );
+      
+    );  
   }
 }

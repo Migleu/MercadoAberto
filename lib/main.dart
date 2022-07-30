@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/componentes/botao_categorias.dart';
 import 'package:flutter_application_1/componentes/campo_pesquisa.dart';
 import 'package:flutter_application_1/componentes/card_frete_gratis.dart';
 import 'package:flutter_application_1/componentes/card_assinatura.dart';
@@ -54,6 +55,8 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         actions: const [
           CampoPesquisa(),
+
+
           Padding(padding : EdgeInsets.all(6)),
           Padding(
             padding: EdgeInsets.only(top: 10),
@@ -109,6 +112,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 'https://http2.mlstatic.com/D_NQ_NP650326-MLA50239834698_062022-B.jpg',
               ),
             ),
+
+
               const Padding(padding: EdgeInsets.all(5)),       
               const CardAssinatura(
                 titulo: "Assine o nivel 6 por R\$ 9,90/mês",
@@ -116,6 +121,34 @@ class _MyHomePageState extends State<MyHomePage> {
               const Padding(padding: EdgeInsets.all(5)),       
               const CardFreteGratis(),
               const Padding(padding: EdgeInsets.all(10)),
+
+              Row(children: [
+
+                BotaoCategoria(
+                  icone: Icons.smartphone,
+                  sub: "Regarregar"
+                ),
+                
+                BotaoCategoria(
+                  icone: Icons.sell_outlined,
+                  sub: "Ofertas"
+                ),
+
+                BotaoCategoria(
+                  icone: Icons.shopping_basket_outlined,
+                  sub: "Mercado"
+                ),
+
+                BotaoCategoria(
+                  icone: Icons.directions_car,
+                  sub: "Veiculos"
+                ),
+
+                BotaoCategoria(
+                  icone: Icons.add,
+                  sub: "Ver mais"
+                ),
+              ],)
             
             
           ],
